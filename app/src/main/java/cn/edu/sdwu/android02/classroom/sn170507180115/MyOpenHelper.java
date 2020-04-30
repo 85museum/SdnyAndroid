@@ -14,7 +14,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     private String STUDENT_TB_SQL="create table student(id integer primary key autoincrement,stuname text,stutel text)";
     public MyOpenHelper(Context context){
         //Context context上下文， String name数据库名称, CursorFactory factory传入NULL, int version数据库的版本
-        super(context,"stub.db",null,1);
+        super(context,"stub.db",null,2);
     }
 
     @Override
@@ -28,7 +28,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+        //当构造方法中指定的版本号，与手机中已有数据库的版本号更新的时候，调用本方法。
+        sqLiteDatabase.execSQL("alter table student add column stuadd text");
     }
 }
 
