@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
 
     <application
         android:allowBackup="true"
@@ -66,7 +70,6 @@
         <activity android:name=".Ch13Activity1">
         </activity>
         <activity android:name=".C14Activity1">
-
         </activity>
 
         <provider
@@ -77,6 +80,10 @@
         </provider>
 
         <activity android:name=".Ch15Activity1">
+
+        </activity>
+
+        <activity android:name=".Ch16Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
